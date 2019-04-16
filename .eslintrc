@@ -1,0 +1,17 @@
+{
+  "extends": "eslint-config-egg",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    "linebreak-style": 0,
+    "no-bitwise": ["error", { "allow": ["~"] }]
+  }
+}
