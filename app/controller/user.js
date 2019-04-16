@@ -11,7 +11,6 @@ class UserController extends BaseController {
     if (!isPass) return this.failure(ctx.config.MISSPARAMS);
 
     const { loginName, password, encode } = ctx.request.body;
-    
   }
 }
 

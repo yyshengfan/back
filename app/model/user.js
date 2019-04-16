@@ -31,15 +31,15 @@ module.exports = app => {
   };
 
   // 查找用户
-  User.checkUser(ctx,user){
-    const user = ctx.model.User.findByArgs({
-      userName:user.userName,
-      password:this.hashPassword(user.password),
-      encode:user.encode
+  User.checkUser = function(ctx, user) {
+    const res = ctx.model.User.findByArgs({
+      userName: user.userName,
+      password: this.hashPassword(user.password),
+      encode: user.encode,
     });
 
-    return user;
-  }
+    return res;
+  };
 
   return User;
 };
