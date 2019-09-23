@@ -23,10 +23,6 @@ const config = {
     code: '007',
     msg: '无效ID',
   },
-  MT4IP: '218.242.245.218',
-  LOGIN: 1,
-  PASSWORD: 'manager',
-  PASSWORD_INVESTOR: '111111',
 };
 
 module.exports = config;

@@ -8,4 +8,5 @@
 module.exports = app => {
   const { router, controller } = app;
   router.get('/enCode', controller.encode.encode);
+  router.post('/login', controller.user.login);
 };

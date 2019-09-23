@@ -16,7 +16,7 @@ module.exports = app => {
       password: STRING,
       avatar: STRING,
       sex: STRING,
-      createTime: INTEGER,
+      create_time: INTEGER,
     },
     {
       timestamps: false,

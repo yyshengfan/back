@@ -3,16 +3,15 @@ const BaseController = require('../core/baseController');
 class UserController extends BaseController {
   async login(ctx) {
     // 验证参数
-    const isPass = ctx.isPass(ctx.request.body, [
-      'loginName',
+    const isPass = this.isPass(ctx.request.body, [
+      'username',
       'password',
-      'encode',
     ]);
-    if (!isPass) return this.failure(ctx.config.MISSPARAMS);
+    if (!isPass) return this.failure(this.MISSPARAMS);
 
-    const user = await ctx.model.user.checkUser({ ...ctx.request.body });
+    const user = await ctx.model.User.find({ ...isPass });
     if (user) {
-      this.success();
+      this.success(user);
     } else {
       this.failure(ctx.config.MISSPARAMS);
     }
